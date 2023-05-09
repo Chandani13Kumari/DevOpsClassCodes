@@ -1,0 +1,48 @@
+pipeline{
+    agent any
+    tools{
+        maven "mymaven"
+        jdk "myjava"
+    }
+    stages{
+        stage('compile'){
+            steps{
+                git 'https://github.com/Chandani13Kumari/DevOpsClassCodes.git'
+                sh "mvn compile"
+            }
+        }
+    //}
+    //stages{
+        stage('codereview'){
+            steps{
+                //git 'https://github.com/Chandani13Kumari/DevOpsClassCodes.git'
+                sh "mvn pmd:pmd"
+            }
+        }
+    //}
+    //stages{
+        stage('unit-test'){
+            steps{
+                //git 'https://github.com/Chandani13Kumari/DevOpsClassCodes.git'
+                sh "mvn test"
+            }
+        }
+   // }
+    //stages{
+        stage('codecoverage'){
+            steps{
+                //git 'https://github.com/Chandani13Kumari/DevOpsClassCodes.git'
+                sh "mvn cobertura:cobertura -Dcobertura.report.format=xml"
+            }
+        }
+    //}
+    //stages{
+        stage('package'){
+            steps{
+                //git 'https://github.com/Chandani13Kumari/DevOpsClassCodes.git'
+                sh "mvn package"
+            }
+        }
+    //}
+    }
+}
