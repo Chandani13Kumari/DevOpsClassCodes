@@ -273,25 +273,6 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
-            
-		    <build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <configuration>
-                <manifest>
-                    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                </manifest>
-                <archive>
-                    <manifestEntries>
-                        <Implementation-Version>${v}</Implementation-Version>
-                    </manifestEntries>
-                </archive>
-            </configuration>
-        </plugin>
-    </plugins>
-</build>
 		<build>    
                 <plugins>
                     <plugin>
