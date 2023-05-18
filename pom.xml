@@ -6,12 +6,7 @@
     <artifactId>addressbook</artifactId>
     <packaging>war</packaging>
     <version>2.0</version>
-    <name>Vaadin Addressbook example</name>
-	
-	<groupId>com.edurekademo.tutorial</groupId>
-    <artifactId>addressbook</artifactId>
-    <packaging>war</packaging>
-    <version>{v}</version>
+	<version>{v}</version>
     <name>Vaadin Addressbook example</name>
 
     <properties>
